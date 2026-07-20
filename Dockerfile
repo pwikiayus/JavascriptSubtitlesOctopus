@@ -1,4 +1,5 @@
 FROM docker.io/emscripten/emsdk:3.1.15
+LABEL org.opencontainers.image.source="https://github.com/pwikiayus/JavascriptSubtitlesOctopus"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \

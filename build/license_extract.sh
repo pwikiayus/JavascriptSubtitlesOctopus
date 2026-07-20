@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # Copyright 2021 Oneric
 # SPDX-License-Identifier: ISC
