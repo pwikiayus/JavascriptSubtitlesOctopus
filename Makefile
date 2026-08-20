@@ -229,3 +229,7 @@ server: # Node http server npm i -g http-server
 	http-server
 
 .PHONY: clean clean-dist clean-libs clean-octopus git-checkout git-smreset server
+
+.PHONY: lint
+lint:
+	npx eslint src
