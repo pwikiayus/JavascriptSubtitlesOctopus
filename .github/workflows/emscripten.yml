@@ -1,6 +1,9 @@
 name: Emscripten
 
 on:
+
+permissions:
+  contents: read
   push:
     branches: [master, ci]
   pull_request:
@@ -101,3 +104,7 @@ jobs:
             "Update binaries to latest nightly\n\nFrom %s" "${{ github.sha }}")" \
            && git push origin gh-pages) \
            || : # Ignore if nothing changed
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
