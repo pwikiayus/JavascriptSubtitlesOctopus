@@ -90,7 +90,7 @@ jobs:
         run: rm -fr assets/js
 
       - name: Download nightly build
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: js
           path: assets/js
