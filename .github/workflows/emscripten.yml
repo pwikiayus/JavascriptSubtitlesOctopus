@@ -69,7 +69,7 @@ jobs:
         docker run --rm --env LC_ALL=C.UTF-8 -v "${PWD}":/code -v "/tmp/emcc_lto:/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/lto" libass/jso:latest
 
     - name: Upload Nightly Build
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master'
       with:
         name: js
