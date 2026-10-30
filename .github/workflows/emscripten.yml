@@ -41,7 +41,7 @@ jobs:
         find . -exec touch -d 1971-01-01T00:00:00 '{}' +
 
     - name: Retrieve Cached Built Dependencies
-      uses: actions/cache@v4
+      uses: actions/cache@v6
       id: cache
       with:
         key: ${{ steps.cache_config.outputs.key }}
