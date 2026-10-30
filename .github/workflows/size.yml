@@ -1,0 +1,12 @@
+name: size
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  size:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: du -sh .
